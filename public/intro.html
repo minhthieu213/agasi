@@ -12,10 +12,7 @@
     <!-- <script src="./main.js" type="text/javascript" async></script> -->
   </head>
   <body>
-    <div
-      id="root"
-      class="max-w-screen-2xl px-[16px] md:px-[32px] lg:px-[64px] font-Montserrat"
-    >
+    <div id="root" class="max-w-screen-2xl px-[16px] md:px-[32px] lg:px-[64px] font-Montserrat">
     <header
     class="flex fixed h-[70px] bg-white top-0 z-50 justify-between shadow-[0_3px_60px_-15px_rgba(0,0,0,0.3)] items-center lg:justify-center py-[24px] w-[95%] md:w-[91.6%] left-0 right-0 mx-auto gap-4 text-lg px-4 md:px-8"
     >
@@ -30,25 +27,28 @@
           id="menu"
           class="hidden basis-4/7 lg:pl-[144px] flex-col justify-start items-start lg:flex lg:flex-row lg:justify-end lg:items-center gap-5"
         >
-          <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center item-active mb-2 lg:mb-0">
-            <a href="#">Trang chủ</a>
-          </li>
           <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center mb-2 lg:mb-0">
-            <a href="#">Giới thiệu</a>
+            <a href="./index.html">Trang chủ</a>
           </li>
-          <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center mb-2 lg:mb-0 flex flex-row"> 
-            <a href="./products.html">Sản phẩm</a>  
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon">
+          <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center item-active mb-2 lg:mb-0">
+            <a href="./intro.html">Giới thiệu</a>
+          </li>
+          <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center mb-2 lg:mb-0 flex flex-row nav-product-item" style="position:relative;">
+            <a href="./products.html">Sản phẩm</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon nav-dropdown-arrow">
               <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-            </svg>         
+            </svg>
+            <div id="cat-dropdown" class="nav-cat-dropdown">
+              <div class="nav-cat-loading">Đang tải...</div>
+            </div>
           </li>
           <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center mb-2 lg:mb-0">
             <a href="./story.html">Tin tức</a>
           </li>
-          <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center mb-2 lg:mb-0">Liên hệ</li>
+          <!-- <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center mb-2 lg:mb-0">Liên hệ</li> -->
     </ul>
-    <div class="flex justify-end basis-1/2 lg:basis-0">
-        <svg
+    <div class="flex justify-end items-center gap-3 basis-1/2 lg:basis-0">
+        <!-- <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -61,12 +61,12 @@
             stroke-linejoin="round"
             d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
         />
-        </svg>
+        </svg> -->
     </div>
     <div
-        class="hidden basis-2/7 border-l-2 px-4 lg:flex justify-end items-center"
+        class="hidden basis-2/7 border-l-2 px-4 lg:flex justify-end items-center gap-4"
     >
-        <div class="">
+        <div class="flex items-center">
         <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -81,10 +81,16 @@
             d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
             />
         </svg>
-        </div>
         <div class="ml-2 item-menu">
-        <a href="tel:08282 33 838" class="">08282 33 838</a>
+        <a href="tel:0914839135" class="">0914 839 135</a>
         </div>
+        </div>
+        <a href="./admin.html" style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#063751,#0a5278);color:white;font-size:12px;font-weight:700;padding:8px 16px;border-radius:22px;letter-spacing:0.5px;text-decoration:none;box-shadow:0 3px 12px rgba(6,55,81,0.35);border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;white-space:nowrap" onmouseover="this.style.boxShadow='0 5px 18px rgba(6,55,81,0.5)';this.style.transform='translateY(-1px)'" onmouseout="this.style.boxShadow='0 3px 12px rgba(6,55,81,0.35)';this.style.transform=''">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:14px;height:14px">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            </svg>
+            ADMIN
+        </a>
     </div>
     <div class="lg:hidden flex justify-end lg:basis-0">
         <svg
@@ -104,7 +110,6 @@
         </svg>
     </div>
     </header>
-
     <div class="pt-[48px] products relative w-[95%] lg:w-[65%] mx-auto">
         <div class="subline-deco">
         <div class="subline-line"></div>
@@ -112,48 +117,34 @@
         <div class="subline-line"></div>
         </div>
         <div class="text-center">
-            <div class="font-medium text-3xl">Agasi - Thắp sáng mọi gia đình</div>
+            <div class="font-medium text-3xl">Chiếu sáng hay - Thắp sáng mọi gia đình</div>
         </div>
         
     </div>
     <footer class="bottom-0 mt-[48px] mx-auto relative border-t-2 border-red-500 py-10">
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
             <div class="">
-            <div class="">
-                <img class="h-[24px]" src="./img/logo.png" alt="" />
-            </div>
             <div class="my-4 font-semibold text-lg">
                 Công ty TNHH Agasi Việt Nam
             </div>
             <div class="text-sm">
-                <div class="">Trụ sở: 72 Dương Đình Hội, Quận 9, Hồ Chí Minh</div>
-                <div class="my-2">
-                Chi nhánh: 47A The Manor Central Park, Đại Kim, Hoàng Mai, Hà
-                Nội
-                </div>
-                <div class="">Số giấy phép kinh doanh: 0109347472</div>
+                <div class="">Địa chỉ: Số 1 Vũ Đức Uý, Thanh Liệt, Hà Nội</div>
+                <div class="mt-4">Số giấy phép kinh doanh: 0109347472</div>
             </div>
             </div>
             <div class="">
             <div class="font-semibold text-lg mb-3">Liên Hệ</div>
             <div class="text-sm">
-                <div class="">0828 233 838</div>
+                <div class="">0981 460 833</div>
                 <div class="mt-4">kinhdoanh@agasi.vn</div>
             </div>
             </div>
             <div class="select-none">
             <div class="font-semibold text-lg mb-3">Bản đồ</div>
             <div>
-                <iframe
-                class="h-[180px] w-[300px]"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.436836534259!2d105.81216327471297!3d20.975119389619866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad3e392fab91%3A0x92019169f960da95!2sThe%20Manor%20Central%20Park!5e0!3m2!1svi!2s!4v1736492416494!5m2!1svi!2s"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59607.748480882256!2d105.812511!3d20.973216!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad4341fbc5b5%3A0x850fa42fbaa4e7ac!2zTmjDoCBWw6JuIFRyxrDhu51uZyAtIFRoZSBNYW5vciBDZW50cmFsIFBhcms!5e0!3m2!1svi!2sus!4v1780737017624!5m2!1svi!2sus" 
+              width="300" height="200" style="border:0;" allowfullscreen="" 
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             </div>
             <div class="">
@@ -169,7 +160,7 @@
                     </svg>
                 </div>
                 <div class="ml-2 cursor-pointer text-sm">
-                    <a href="https://www.facebook.com/Home.Agasi">Facebook</a>
+                    <a href="https://www.facebook.com/chieusanghay">Facebook</a>
                 </div>
                 </div>
                 <div class="flex flex-row hover:text-[#063751]">
@@ -215,6 +206,72 @@
             </div>
         </div>
     </footer>
-    </div>
+    </div><!-- end root -->
+  <style>
+    /* ---- Dropdown danh mục ---- */
+    .nav-product-item { position: relative; }
+    .nav-cat-dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.15);
+      min-width: 220px;
+      padding: 22px 0 8px;
+      z-index: 999;
+      border-top: 3px solid #063751;
+    }
+    /* Cầu nối vô hình lấp khoảng hở giữa nav và dropdown */
+    .nav-cat-dropdown::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 0;
+      right: 0;
+      height: 20px;
+    }
+    .nav-product-item:hover .nav-cat-dropdown { display: block; }
+    .nav-product-item:hover .nav-dropdown-arrow { transform: rotate(180deg); }
+    .nav-cat-dropdown a {
+      display: block;
+      padding: 9px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #1a202c;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-cat-dropdown a:hover { background: #f0f6fb; color: #063751; }
+    .nav-cat-dropdown .nav-cat-all {
+      font-weight: 700;
+      color: #063751;
+      border-bottom: 1px solid #e2e8f0;
+      margin-bottom: 4px;
+    }
+    .nav-cat-loading { padding: 10px 20px; font-size: 13px; color: #718096; }
+    .nav-dropdown-arrow { transition: transform 0.2s; }
+  </style>
+  <script>
+    const API = 'http://localhost:3000/api';
+    async function loadNavCategories() {
+      try {
+        const res = await fetch(API + '/categories');
+        const cats = await res.json();
+        const dropdown = document.getElementById('cat-dropdown');
+        if (!dropdown) return;
+        dropdown.innerHTML =
+          '<a class="nav-cat-all" href="./products.html">Tất cả sản phẩm</a>' +
+          cats.map(c => `<a href="./products.html?cat=${c.id}">${c.name}</a>`).join('');
+      } catch(e) {
+        const dropdown = document.getElementById('cat-dropdown');
+        if (dropdown) dropdown.innerHTML = '<a class="nav-cat-all" href="./products.html">Xem tất cả</a>';
+      }
+    }
+    loadNavCategories();
+  </script>
   </body>
 </html>

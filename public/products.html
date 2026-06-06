@@ -3,316 +3,269 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <link href="./output.css" rel="stylesheet" />
     <script src="./main.js" async></script>
-    <!-- <script src="./main.js" type="text/javascript" async></script> -->
   </head>
   <body>
-    <div
-      id="root"
-      class="max-w-screen-2xl px-[16px] md:px-[32px] lg:px-[64px] font-Montserrat"
-    >
-    <header
-    class="flex fixed h-[70px] bg-white top-0 z-50 justify-between shadow-[0_3px_60px_-15px_rgba(0,0,0,0.3)] items-center lg:justify-center py-[24px] w-[95%] md:w-[91.6%] left-0 right-0 mx-auto gap-4 text-lg px-4 md:px-8"
-    >
+    <div id="root" class="max-w-screen-2xl px-[16px] md:px-[32px] lg:px-[64px] font-Montserrat">
+    <header class="flex fixed h-[70px] bg-white top-0 z-50 justify-between shadow-[0_3px_60px_-15px_rgba(0,0,0,0.3)] items-center lg:justify-center py-[24px] w-[95%] md:w-[91.6%] left-0 right-0 mx-auto gap-4 text-lg px-4 md:px-8">
     <div class="lg:basis-1/7">
-        <img
-        src="./img/logo.png"
-        alt="Logo"
-        class="lg:py-3 text-2xl h-full w-[120px]"
-        />
+        <img src="./img/logo.png" alt="Logo" class="lg:py-3 text-2xl h-full w-[120px]" />
     </div>
-    <ul
-          id="menu"
-          class="hidden basis-4/7 lg:pl-[144px] flex-col justify-start items-start lg:flex lg:flex-row lg:justify-end lg:items-center gap-5"
-        >
-          <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center item-active mb-2 lg:mb-0">
-            <a href="#">Trang chủ</a>
+    <ul id="menu" class="hidden basis-4/7 lg:pl-[144px] flex-col justify-start items-start lg:flex lg:flex-row lg:justify-end lg:items-center gap-5">
+          <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center mb-2 lg:mb-0"><a href="./index.html">Trang chủ</a></li>
+          <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center mb-2 lg:mb-0"><a href="./intro.html">Giới thiệu</a></li>
+          <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center item-active mb-2 lg:mb-0 flex flex-row nav-product-item" style="position:relative;">
+            <a href="./products.html">Sản phẩm</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon nav-dropdown-arrow"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg>
+            <div id="cat-dropdown" class="nav-cat-dropdown">
+              <div class="nav-cat-loading">Đang tải...</div>
+            </div>
           </li>
-          <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center mb-2 lg:mb-0">
-            <a href="./intro.html">Giới thiệu</a>
-          </li>
-          <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center mb-2 lg:mb-0 flex flex-row"> 
-            <a href="#">Sản phẩm</a>  
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon">
-              <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-            </svg>         
-          </li>
-          <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center mb-2 lg:mb-0">
-            <a href="./story.html">Tin tức</a>
-          </li>
-          <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center mb-2 lg:mb-0">Liên hệ</li>
+          <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center mb-2 lg:mb-0"><a href="./story.html">Tin tức</a></li>
+          <!-- <li class="item-menu pl-8 md:pl-[35%] lg:pl-0 text-left lg:text-center mb-2 lg:mb-0">Liên hệ</li> -->
     </ul>
-    <div class="flex justify-end basis-1/2 lg:basis-0">
-        <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="icon"
-        >
-        <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-        />
-        </svg>
+    <div class="flex justify-end items-center gap-3 basis-1/2 lg:basis-0">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg> -->
+        <a href="./admin.html" class="lg:hidden flex items-center gap-1 bg-[#063751] text-white text-xs px-2.5 py-1.5 rounded hover:bg-[#0a4f72] transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:14px;height:14px"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" /></svg>
+          Admin
+        </a>
     </div>
-    <div
-        class="hidden basis-2/7 border-l-2 px-4 lg:flex justify-end items-center"
-    >
-        <div class="">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="icon"
-        >
-            <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
-            />
-        </svg>
-        </div>
-        <div class="ml-2 item-menu">
-        <a href="tel:08282 33 838" class="">08282 33 838</a>
-        </div>
+    <div class="hidden basis-2/7 border-l-2 px-4 lg:flex justify-end items-center gap-4">
+        <div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg>
+        <div class="ml-2 item-menu"><a href="tel:0914839135" class="">0914 839 135</a></div></div>
+        <a href="./admin.html" style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#063751,#0a5278);color:white;font-size:12px;font-weight:700;padding:8px 16px;border-radius:22px;letter-spacing:0.5px;text-decoration:none;box-shadow:0 3px 12px rgba(6,55,81,0.35);border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;white-space:nowrap" onmouseover="this.style.boxShadow='0 5px 18px rgba(6,55,81,0.5)';this.style.transform='translateY(-1px)'" onmouseout="this.style.boxShadow='0 3px 12px rgba(6,55,81,0.35)';this.style.transform=''">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:14px;height:14px">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            </svg>
+            ADMIN
+        </a>
     </div>
     <div class="lg:hidden flex justify-end lg:basis-0">
-        <svg
-        id="toggle-menu"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="icon cursor-pointer"
-        >
-        <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-        />
-        </svg>
+        <svg id="toggle-menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon cursor-pointer">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
     </div>
     </header>
 
     <div class="pt-[48px] products relative w-[95%] lg:w-[65%] mx-auto">
         <div class="subline-deco">
-        <div class="subline-line"></div>
-        <div class="subline-name">Sản phẩm nổi bật</div>
-        <div class="subline-line"></div>
+          <div class="subline-line"></div>
+          <div class="subline-name">Sản phẩm nổi bật</div>
+          <div class="subline-line"></div>
         </div>
-
-        <div
-        class="products-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
-        >
-        <div class="product-card bg-white h-[300px] shadow-xl select-none">
-            <a href="#" class="relative">
-            <img
-                class="w-full h-full bg-center"
-                src="./img/product_1.png"
-                alt=""
-            />
-            <div class="product-card-name">Công tắc & Ổ cắm thông minh</div>
-            </a>
+        <div id="category-filter" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;justify-content:center;"></div>
+        <div id="products-list" class="products-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div style="background:#f4f6f9;height:300px;border-radius:4px;animation:pulse 1.5s infinite;"></div>
+          <div style="background:#f4f6f9;height:300px;border-radius:4px;animation:pulse 1.5s infinite;"></div>
+          <div style="background:#f4f6f9;height:300px;border-radius:4px;animation:pulse 1.5s infinite;"></div>
         </div>
-        <div class="product-card bg-white h-[300px] shadow-xl select-none">
-            <a href="#" class="relative">
-            <img
-                class="w-full h-full bg-center"
-                src="./img/product_2.jpg"
-                alt=""
-            />
-            <div class="product-card-name">Đèn Downlight Rọi</div>
-            </a>
-        </div>
-        <div class="product-card bg-white h-[300px] shadow-xl select-none">
-            <a href="#" class="relative">
-            <img
-                class="w-full h-full bg-center"
-                src="./img/product_3.jpg"
-                alt=""
-            />
-            <div
-                class="font-semibold text-gray-500 hover:text-[#063751] absolute w-full text-center product-card-name"
-            >
-                Đèn ray nam châm
-            </div>
-            </a>
-        </div>
-        <div class="product-card bg-white h-[300px] shadow-xl select-none">
-            <a href="#" class="relative">
-            <img
-                class="w-full h-full bg-center"
-                src="./img/product_4.jpg"
-                alt=""
-            />
-            <div
-                class="font-semibold text-gray-500 hover:text-[#063751] absolute w-full text-center product-card-name"
-            >
-                Led dán
-            </div>
-            </a>
-        </div>
-        <div class="product-card bg-white h-[300px] shadow-xl select-none">
-            <a href="#" class="h-full relative">
-            <img
-                class="w-full h-full bg-center"
-                src="./img/product_5.jpg"
-                alt=""
-            />
-            <div class="product-card-name">Rèm thông minh</div>
-            </a>
-        </div>
-        <div class="product-card bg-white h-[300px] shadow-xl select-none">
-            <a href="#" class="relative">
-            <img
-                class="w-full h-full bg-center"
-                src="./img/product_6.jpg"
-                alt=""
-            />
-            <div
-                class="font-semibold text-gray-500 hover:text-[#063751] absolute w-full text-center product-card-name"
-            >
-                Khóa & Camera
-            </div>
-            </a>
-        </div>
-        <div class="product-card bg-white h-[300px] shadow-xl select-none">
-            <a href="#" class="relative">
-            <img
-                class="w-full h-full bg-center"
-                src="./img/product_7.jpg"
-                alt=""
-            />
-            <div
-                class="font-semibold text-gray-500 hover:text-[#063751] absolute w-full text-center product-card-name"
-            >
-                Cảm biến
-            </div>
-            </a>
-        </div>
-        <div class="product-card bg-white h-[300px] shadow-xl select-none">
-            <a href="#" class="h-full relative">
-            <img
-                class="w-full h-full bg-center"
-                src="./img/product_8.jpg"
-                alt=""
-            />
-            <div class="product-card-name">Hub agasi home</div>
-            </a>
-        </div>
-        </div>
+        <div id="no-products" style="display:none;text-align:center;padding:48px 0;color:#718096;font-size:14px;">Chưa có sản phẩm nào trong danh mục này.</div>
     </div>
-    <!-- End products -->
+
+    <!-- Modal chi tiết sản phẩm -->
+    <div id="product-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:200;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto;">
+      <div style="background:white;border-radius:16px;width:100%;max-width:min(960px,95vw);box-shadow:0 25px 60px rgba(0,0,0,0.3);margin:auto;">
+        <div style="padding:18px 24px;border-bottom:1px solid #e2e8f0;display:flex;align-items:center;justify-content:space-between;">
+          <h3 id="modal-name" style="font-size:17px;font-weight:700;font-family:'Montserrat',sans-serif;color:#063751;"></h3>
+          <button onclick="closeModal()" style="background:none;border:none;font-size:26px;cursor:pointer;color:#718096;line-height:1;padding:0 4px;">×</button>
+        </div>
+        <div id="modal-body" style="display:grid;grid-template-columns:1fr 1fr;"></div>
+      </div>
+    </div>
+
+    <style>
+      @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.5} }
+      .cat-btn {
+        padding: 6px 18px; border-radius: 20px; border: 1.5px solid #e2e8f0;
+        background: white; font-family: 'Montserrat',sans-serif; font-size: 13px;
+        font-weight: 600; cursor: pointer; color: #718096; transition: all 0.2s;
+      }
+      .cat-btn:hover, .cat-btn.active { background: #063751; color: white; border-color: #063751; }
+      .product-card { cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
+      .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.15) !important; }
+      @media(max-width:600px) { #modal-body { grid-template-columns: 1fr !important; } }
+    </style>
+
+    <script>
+      const API = 'http://localhost:3000/api';
+      // ⭐ FIX: dùng URL tuyệt đối để ảnh luôn load đúng
+      const UPLOADS = 'http://localhost:3000/uploads';
+      let allProducts = [];
+
+      async function loadProducts() {
+        try {
+          const [pRes, cRes] = await Promise.all([fetch(API+'/products'), fetch(API+'/categories')]);
+          if (!pRes.ok) throw new Error();
+          allProducts = await pRes.json();
+          const categories = await cRes.json();
+          renderCategoryFilter(categories);
+
+          const urlParams = new URLSearchParams(window.location.search);
+          const catParam = urlParams.get('cat');
+          if (catParam) {
+            renderProducts(allProducts.filter(p => p.category_id == catParam));
+            setTimeout(() => {
+              document.querySelectorAll('.cat-btn').forEach(b => {
+                b.classList.remove('active');
+                if (b.dataset.catId == catParam) b.classList.add('active');
+              });
+            }, 0);
+          } else {
+            renderProducts(allProducts);
+          }
+        } catch(e) {
+          document.getElementById('products-list').innerHTML = [
+            ['./img/product_1.png','Công tắc & Ổ cắm thông minh'],
+            ['./img/product_2.jpg','Đèn Downlight Rọi'],
+            ['./img/product_3.jpg','Đèn ray nam châm'],
+            ['./img/product_4.jpg','Led dán'],
+            ['./img/product_5.jpg','Rèm thông minh'],
+            ['./img/product_6.jpg','Khóa & Camera'],
+            ['./img/product_7.jpg','Cảm biến'],
+            ['./img/product_8.jpg','Hub Agasi Home'],
+          ].map(([img,name]) => `
+            <div class="product-card bg-white h-[300px] shadow-xl select-none">
+              <img src="${img}" style="width:100%;height:100%;object-fit:cover;" />
+              <div class="product-card-name">${name}</div>
+            </div>`).join('');
+        }
+      }
+
+      function renderCategoryFilter(categories) {
+        const wrap = document.getElementById('category-filter');
+        if (!categories.length) { wrap.style.display='none'; return; }
+        wrap.innerHTML = '<button class="cat-btn active" data-cat-id="" onclick="filterCat(\'\', this)">Tất cả</button>' +
+          categories.map(c => `<button class="cat-btn" data-cat-id="${c.id}" onclick="filterCat(${c.id}, this)">${c.name}</button>`).join('');
+      }
+
+      function filterCat(catId, btn) {
+        document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderProducts(catId ? allProducts.filter(p => p.category_id == catId) : allProducts);
+      }
+
+      function renderProducts(products) {
+        const list = document.getElementById('products-list');
+        const empty = document.getElementById('no-products');
+        if (!products.length) { list.innerHTML=''; empty.style.display='block'; return; }
+        empty.style.display = 'none';
+        list.innerHTML = products.map(p => `
+          <div class="product-card bg-white h-[300px] shadow-xl select-none" onclick="openProduct(${p.id})">
+            ${p.image
+              ? `<img src="${UPLOADS}/${p.image}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;" />`
+              : `<div style="width:100%;height:100%;background:#f4f6f9;display:flex;align-items:center;justify-content:center;color:#b0b8c1;font-size:13px;">Chưa có ảnh</div>`}
+            <div class="product-card-name">${p.name}</div>
+          </div>`).join('');
+      }
+
+      async function openProduct(id) {
+        const res = await fetch(`${API}/products/${id}`);
+        const p = await res.json();
+        document.getElementById('modal-name').textContent = p.name;
+        document.getElementById('modal-body').innerHTML = `
+          <div style="${p.image ? '' : 'display:none'}">
+            <img src="${p.image ? UPLOADS+'/'+p.image : ''}" style="width:100%;height:300px;object-fit:cover;border-radius:0 0 0 16px;" />
+          </div>
+          <div style="padding:24px;overflow-y:auto;max-height:75vh;">
+            ${p.category_name ? `<span style="display:inline-block;padding:3px 12px;border-radius:20px;background:#ebf4ff;color:#2b6cb0;font-size:11px;font-weight:700;margin-bottom:12px;letter-spacing:0.3px;">${p.category_name}</span>` : ''}
+            <div style="font-size:24px;font-weight:700;color:#e85d26;margin-bottom:10px;">${p.price ? Number(p.price).toLocaleString('vi-VN')+'đ' : '<span style="font-size:15px;color:#718096;">Liên hệ báo giá</span>'}</div>
+            <div class="product-desc-html" style="font-size:13px;color:#4a5568;line-height:1.8;margin-bottom:16px;">${p.description || 'Chưa có mô tả sản phẩm.'}</div>
+            ${p.files && p.files.length ? `
+              <div style="border-top:1px solid #e2e8f0;padding-top:14px;margin-top:4px;">
+                <div style="font-size:11px;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Tài liệu đính kèm</div>
+                ${p.files.map(f => `
+                  <div style="display:flex;align-items:center;gap:6px;padding:8px 12px;background:#f7fafc;border-radius:8px;margin-bottom:6px;border:1px solid #e2e8f0;">
+                    <span style="font-size:12px;color:#4a5568;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">📎 ${f.original_name}</span>
+                    <a href="${UPLOADS}/${f.filename}" target="_blank" rel="noopener" style="flex-shrink:0;padding:4px 10px;background:#063751;color:white;border-radius:6px;font-size:11px;font-weight:700;text-decoration:none;white-space:nowrap;">Xem</a>
+                  </div>`).join('')}
+              </div>` : ''}
+            <button onclick="closeModal()" style="margin-top:16px;width:100%;padding:10px;background:#063751;color:white;border:none;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;cursor:pointer;">Đóng</button>
+          </div>`;
+        const modal = document.getElementById('product-modal');
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        document.getElementById('product-modal').style.display = 'none';
+        document.body.style.overflow = '';
+      }
+      document.getElementById('product-modal').addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+      });
+
+      loadProducts();
+
+      async function loadNavCategories() {
+        try {
+          const res = await fetch(API + '/categories');
+          const cats = await res.json();
+          const dropdown = document.getElementById('cat-dropdown');
+          if (!dropdown) return;
+          dropdown.innerHTML =
+            cats.map(c => `<a href="./products.html?cat=${c.id}">${c.name}</a>`).join('');
+        } catch(e) {
+          const dropdown = document.getElementById('cat-dropdown');
+          if (dropdown) dropdown.innerHTML = '<a class="nav-cat-all" href="./products.html">Xem tất cả</a>';
+        }
+      }
+      loadNavCategories();
+    </script>
+
     <footer class="bottom-0 mt-[48px] mx-auto relative border-t-2 border-red-500 py-10">
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
             <div class="">
-            <div class="">
-                <img class="h-[24px]" src="./img/logo.png" alt="" />
-            </div>
-            <div class="my-4 font-semibold text-lg">
-                Công ty TNHH Agasi Việt Nam
-            </div>
+            <div class="my-4 font-semibold text-lg">Công ty TNHH Agasi Việt Nam</div>
             <div class="text-sm">
-                <div class="">Trụ sở: 72 Dương Đình Hội, Quận 9, Hồ Chí Minh</div>
-                <div class="my-2">
-                Chi nhánh: 47A The Manor Central Park, Đại Kim, Hoàng Mai, Hà
-                Nội
-                </div>
-                <div class="">Số giấy phép kinh doanh: 0109347472</div>
+                <div class="">Địa chỉ: Số 1 Vũ Đức Uý, Thanh Liệt, Hà Nội</div>div>
+                <div class="mt-4">Số giấy phép kinh doanh: 0109347472</div>
             </div>
             </div>
             <div class="">
             <div class="font-semibold text-lg mb-3">Liên Hệ</div>
             <div class="text-sm">
-                <div class="">0828 233 838</div>
+                <div class="">0981 460 833</div>
                 <div class="mt-4">kinhdoanh@agasi.vn</div>
             </div>
             </div>
             <div class="select-none">
             <div class="font-semibold text-lg mb-3">Bản đồ</div>
             <div>
-                <iframe
-                class="h-[180px] w-[300px]"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.436836534259!2d105.81216327471297!3d20.975119389619866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad3e392fab91%3A0x92019169f960da95!2sThe%20Manor%20Central%20Park!5e0!3m2!1svi!2s!4v1736492416494!5m2!1svi!2s"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59607.748480882256!2d105.812511!3d20.973216!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad4341fbc5b5%3A0x850fa42fbaa4e7ac!2zTmjDoCBWw6JuIFRyxrDhu51uZyAtIFRoZSBNYW5vciBDZW50cmFsIFBhcms!5e0!3m2!1svi!2sus!4v1780737017624!5m2!1svi!2sus" 
+              width="300" height="200" style="border:0;" allowfullscreen="" 
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             </div>
             <div class="">
             <div class="font-semibold text-lg mb-3">Theo dõi chúng tôi</div>
             <div class="flex flex-col justify-between gap-4">
-                <div class="flex flex-row hover:text-[#063751]">
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                    <path
-                        d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"
-                    />
-                    </svg>
-                </div>
-                <div class="ml-2 cursor-pointer text-sm">
-                    <a href="https://www.facebook.com/Home.Agasi">Facebook</a>
-                </div>
-                </div>
-                <div class="flex flex-row hover:text-[#063751]">
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                    <path
-                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
-                    />
-                    </svg>
-                </div>
-                <div class="ml-2 cursor-pointer text-sm">
-                    <a href="mailto:lsthanh.ftu@gmail.com">Gmail</a>
-                </div>
-                </div>
-                <div class="flex flex-row hover:text-[#063751]">
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                    <path
-                        d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
-                    />
-                    </svg>
-                </div>
-                <div class="ml-2 cursor-pointer text-sm">
-                    <a href="tel:0828233838">Điện thoại</a>
-                </div>
-                </div>
-                <div class="flex flex-row hover:text-[#063751]">
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                    <path
-                        d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"
-                    />
-                    </svg>
-                </div>
-                <div class="ml-2 cursor-pointer text-sm">
-                    <a href="https://www.youtube.com/channel/UCwXkQD6SacOEbcS4xOOmR-Q">Youtube</a>
-                </div>
-                </div>
+                <div class="flex flex-row hover:text-[#063751]"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></div><div class="ml-2 cursor-pointer text-sm"><a href="https://www.facebook.com/chieusanghay">Facebook</a></div></div>
+                <div class="flex flex-row hover:text-[#063751]"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></div><div class="ml-2 cursor-pointer text-sm"><a href="mailto:lsthanh.ftu@gmail.com">Gmail</a></div></div>
+                <div class="flex flex-row hover:text-[#063751]"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg></div><div class="ml-2 cursor-pointer text-sm"><a href="tel:0828233838">Điện thoại</a></div></div>
+                <div class="flex flex-row hover:text-[#063751]"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg></div><div class="ml-2 cursor-pointer text-sm"><a href="https://www.youtube.com/channel/UCwXkQD6SacOEbcS4xOOmR-Q">Youtube</a></div></div>
             </div>
             </div>
         </div>
     </footer>
     </div>
+  <style>
+    .nav-product-item { position: relative; }
+    .nav-cat-dropdown {
+      display: none; position: absolute; top: calc(100%); left: 50%;
+      transform: translateX(-50%); background: white; border-radius: 12px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.15); min-width: 220px;
+      padding: 8px 0; z-index: 999; border-top: 3px solid #063751;
+    }
+    .nav-product-item:hover .nav-cat-dropdown { display: block; }
+    .nav-product-item:hover .nav-dropdown-arrow { transform: rotate(180deg); }
+    .nav-cat-dropdown a { display: block; padding: 9px 20px; font-size: 13px; font-weight: 500; color: #1a202c; text-decoration: none; white-space: nowrap; transition: background 0.15s, color 0.15s; }
+    .nav-cat-dropdown a:hover { background: #f0f6fb; color: #063751; }
+    .nav-cat-dropdown .nav-cat-all { font-weight: 700; color: #063751; border-bottom: 1px solid #e2e8f0; margin-bottom: 4px; }
+    .nav-cat-loading { padding: 10px 20px; font-size: 13px; color: #718096; }
+    .nav-dropdown-arrow { transition: transform 0.2s; }
+  </style>
   </body>
 </html>
